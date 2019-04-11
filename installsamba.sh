@@ -1,14 +1,10 @@
 #!/bin/bash
 
-# created by Enigma007 of the ubuntu forums
-# I took all of these steps from this web site: http://www.howtoforge.com/samba_setup_ubuntu_5.10
-# I take no credit for the tutorial only for turning it into a script.
-# Also feel free to edit this and make it better.
-echo "Installing samba and other dependencies..."
+echo "A samba szerver telepitese..."
 sudo apt-get install samba samba-common samba-doc libcupsys2-gnutls10 libkrb53 winbind smbclient
-echo "Enter workgroup name:"
+echo "Munkacsoport neve:"
 read wkgrpname
-echo "Enter server name:"
+echo "Szerver neve:"
 read servername
 echo "[global]
    workgroup = $wkgrpname
@@ -96,4 +92,4 @@ sudo chmod -R 771 /home/samba/
 sudo /etc/init.d/samba restart
 sudo smbpasswd -a root
 sudo echo "root = Administrator" > /etc/samba/smbusers
-echo "Samba is now configured. Run the adduser script to add users and the addshares script to add shared locations."
+echo "A samba telepitese megtortent. Futtasd az addusers scriptet a felhasznalok letrehozasahoz, vagy az addshares scriptet a megosztasok hozzaadasahoz."
