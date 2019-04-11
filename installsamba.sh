@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "A samba szerver telepitese..."
-sudo apt-get install samba samba-common samba-doc libcupsys2-gnutls10 libkrb53 winbind smbclient
+sudo apt-get install -y samba
 echo "Munkacsoport neve:"
 read wkgrpname
 echo "Szerver neve:"
